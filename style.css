@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: "Poppins";
+}
+
+li {
+  list-style: none;
+}
+
+.nav {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 60px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.nav .nav__link-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+}
+.nav .nav__link-list li {
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav .nav__link-list li:hover {
+  color: #c6742f;
+}
+
+.nav .nav__logo {
+  width: 53px;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav img {
+  width: 100%;
+}
+
+.slider-section {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  background-image: url("assets/logo-elite-icon.png");
+  background-repeat: no-repeat;
+  background-position: 120% 110%;
+}
+
+.slides-container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100%;
+  transform: translateX(-100%);
+}
+
+.slide {
+  min-width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.slide__text {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 35%;
+  height: auto;
+}
+
+.slide__text h1 {
+  font-size: 58px;
+}
+
+.slide__text button {
+  width: fit-content;
+  font-size: 24px;
+  padding: 15px 48px;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  background-color: black;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.slide__text button:hover {
+  background-color: white;
+  color: black;
+}
+
+.slide__img {
+  width: 45%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 40px;
+}
+
+.slide__img img {
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  object-fit: cover;
+}
+
+.slides-control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.next-slide-animation {
+  animation-name: next-slide;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+}
+
+.slide-text-animation {
+  animation-name: slide-text-in;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes next-slide {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes slide-text-in {
+  0% {
+    opacity: 0%;
+    transform: translateY(-50%);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0%);
+  }
+}
