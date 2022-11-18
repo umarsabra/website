@@ -168,3 +168,58 @@ li {
     transform: translateY(0%);
   }
 }
+
+.control {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.slide-indecator {
+  gap: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.slide-indecator .slide-point {
+  box-sizing: border-box;
+  width: 15px;
+  height: 15px;
+  border: solid black 3px;
+  border-radius: 50%;
+}
+
+.active-point {
+  box-sizing: border-box;
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  border-radius: 50%;
+}
+
+.control button {
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.control button:hover {
+  filter: invert(100%);
+}
+
+.control img {
+  width: 24px;
+}
+
+#btn-next img {
+  transform: rotate(190deg);
+}
