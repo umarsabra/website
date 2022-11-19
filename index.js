@@ -1,7 +1,7 @@
 const next_btn = document.getElementById("btn-next");
 const prev_btn = document.getElementById("btn-prev");
 const slide_container = document.getElementById("slides-container");
-const slide_indecator = document.getElementById("slide-indecator");
+// const slide_indecator = document.getElementById("slide-indecator");
 const slides = document.querySelectorAll(".slide");
 
 let counter = 1;
@@ -10,7 +10,6 @@ const add_animation = (active_slide) => {
   if (active_slide == 0) {
   } else if (active_slide == 5) {
   } else {
-    console.log(active_slide);
     slides.forEach((slide) => {
       slide
         .querySelector(".slide__text")
@@ -27,7 +26,7 @@ next_btn.addEventListener("click", () => {
   counter++;
   add_animation(counter);
   slide_container.style.transform = `translateX(-${100 * counter}%)`;
-  slide_indecator.children[counter - 1].classList.add("active-point");
+  // slide_indecator.children[counter - 1].classList.add("active-point");
 });
 
 prev_btn.addEventListener("click", () => {
