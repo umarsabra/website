@@ -62,9 +62,9 @@ li {
   position: relative;
   overflow-x: hidden;
   align-items: center;
-  background-image: url("assets/logo-elite-icon.png");
+  background-image: url("assets/pattern-wallpaper.png");
   background-repeat: no-repeat;
-  background-position: 120% 110%;
+  background-position: center;
 }
 
 .slides-container {
@@ -140,12 +140,6 @@ li {
   width: 100%;
 }
 
-.next-slide-animation {
-  animation-name: next-slide;
-  animation-duration: 5s;
-  animation-fill-mode: forwards;
-}
-
 .slide-text-animation {
   animation-name: slide-text-in;
   animation-duration: 0.5s;
@@ -153,10 +147,11 @@ li {
   animation-timing-function: ease-in-out;
 }
 
-@keyframes next-slide {
-  100% {
-    transform: translateX(-100%);
-  }
+.slide-img-animation {
+  animation-name: slide-img-in;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(1, 0.26, 0.18, 0.96);
 }
 
 @keyframes slide-text-in {
@@ -166,6 +161,15 @@ li {
   }
   100% {
     opacity: 100%;
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-img-in {
+  0% {
+    transform: translateX(10%);
+  }
+  100% {
     transform: translateX(0%);
   }
 }
@@ -231,8 +235,20 @@ li {
     justify-content: center;
   }
 
+  .slide__text {
+    text-align: center;
+    align-items: center;
+  }
+
+  .nav .nav__link-list {
+    display: none;
+  }
+  .nav {
+    justify-content: center;
+  }
+
   .slide__text,
   .slide__img {
-    width: 80%;
+    width: 70%;
   }
 }
