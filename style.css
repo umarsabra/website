@@ -232,7 +232,6 @@ li {
 @media only screen and (max-width: 1024px) {
   .slide {
     flex-direction: column-reverse;
-    justify-content: center;
   }
 
   .slide__text {
