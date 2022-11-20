@@ -232,7 +232,6 @@ li {
 @media only screen and (max-width: 1024px) {
   .slide {
     flex-direction: column-reverse;
-    justify-content: center;
   }
 
   .slide__text {
@@ -245,6 +244,12 @@ li {
   }
   .nav {
     justify-content: center;
+    background-color: white;
+    align-items: center;
+  }
+
+  .nav .nav__logo {
+    width: 80px;
   }
 
   .slide__text,
