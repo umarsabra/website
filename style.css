@@ -252,8 +252,11 @@ li {
     width: 80px;
   }
 
-  .slide__text,
-  .slide__img {
+  .slide__text {
     width: 70%;
+  }
+
+  .slide__img {
+    width: 90%;
   }
 }
