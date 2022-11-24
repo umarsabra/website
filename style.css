@@ -232,11 +232,15 @@ li {
 @media only screen and (max-width: 1024px) {
   .slide {
     flex-direction: column-reverse;
+    justify-content: space-evenly;
   }
 
   .slide__text {
     text-align: center;
     align-items: center;
+  }
+  .slide__text h1 {
+    font-size: 38px;
   }
 
   .nav .nav__link-list {
