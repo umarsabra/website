@@ -90,6 +90,7 @@ li {
   flex-direction: column;
   gap: 40px;
   width: 35%;
+  color: white;
   height: auto;
 }
 
@@ -104,16 +105,16 @@ li {
   outline: none;
   border: none;
   border-radius: 30px;
-  background-color: black;
+  background-color: white;
   text-align: center;
   cursor: pointer;
-  color: white;
+  color: black;
   transition: all 0.2s ease-in-out;
 }
 
 .slide__text button:hover {
-  background-color: white;
-  color: black;
+  background-color: black;
+  color: white;
 }
 
 .slide__img {
