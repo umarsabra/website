@@ -132,12 +132,15 @@ li {
   object-fit: cover;
 }
 
-.slides-control {
+.slides-contorl {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   width: 100%;
+  position: absolute;
+  bottom: 0;
+  transform: translateY(-50%);
 }
 
 .slide-text-animation {

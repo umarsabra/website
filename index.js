@@ -19,8 +19,6 @@ const prev_slide = () => {
   slide_container.style.transform = `translateX(-${100 * counter}%)`;
 };
 
-setTimeout(next_slide, 1000);
-
 const add_animation = (active_slide) => {
   if (active_slide == 0) {
   } else if (active_slide == 5) {
@@ -42,10 +40,6 @@ const add_animation = (active_slide) => {
   }
 };
 
-// next_btn.addEventListener("click", () => next_slide);
-
-// prev_btn.addEventListener("click", () => prev_slide);
-
 slide_container.addEventListener("transitionend", () => {
   if (slides[counter].id === "first-clone") {
     slide_container.style.transition = "none";
@@ -59,8 +53,20 @@ slide_container.addEventListener("transitionend", () => {
   }
 });
 
+let time_out_id;
+
 function auto_slide() {
   next_slide();
-  setTimeout(auto_slide, 3000);
+  time_out_id = setTimeout(auto_slide, 3000);
 }
-setTimeout(auto_slide, 3000);
+
+setTimeout(auto_slide, 4000);
+next_btn.addEventListener("click", () => {
+  clearTimeout(time_out_id);
+  next_slide();
+});
+
+prev_btn.addEventListener("click", () => {
+  clearTimeout(time_out_id);
+  prev_slide();
+});
