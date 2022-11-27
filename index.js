@@ -2,6 +2,11 @@ const next_btn = document.getElementById("btn-next");
 const prev_btn = document.getElementById("btn-prev");
 const slide_container = document.getElementById("slides-container");
 const slides = document.querySelectorAll(".slide");
+const lang_switcher = document.getElementById("lang-switcher");
+
+// lang_switcher.addEventListener("change", (e) => {
+//   document.body.classList.add("ar-slider");
+// });
 
 let counter = 1;
 
