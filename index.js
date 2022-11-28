@@ -4,10 +4,6 @@ const slide_container = document.getElementById("slides-container");
 const slides = document.querySelectorAll(".slide");
 const lang_switcher = document.getElementById("lang-switcher");
 
-// lang_switcher.addEventListener("change", (e) => {
-//   document.body.classList.add("ar-slider");
-// });
-
 let counter = 1;
 
 const next_slide = () => {

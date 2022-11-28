@@ -64,6 +64,7 @@ li {
   align-items: center;
   background-image: url("assets/elite-pattern-background.jpeg");
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
 }
 
